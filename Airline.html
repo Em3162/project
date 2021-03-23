@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf8">
+    <title>Airline Booking</title>
+    <style>
+        body {
+            background-image: url("holiday.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 80%;
+            opacity: 0.8;
+            font-family: helvetica;
+        }
+
+        .a {
+            margin-top: -10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            background-color: white;
+            padding: 10px;
+            border: gray;
+            box-shadow: 5px 5px;
+        }
+
+        .b {
+            font-style: italic;
+            margin-top: -10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding: 0px;
+            font-size: 20px;
+            color: white
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        .topnav a.right {
+            float: right;
+        }
+
+        .box {
+            border: solid;
+            border-width: 2px;
+            border-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            width: 49.8296%;
+            height: 55px;
+            display: inline-block;
+        }
+
+        .middle {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    </style>
+</head>
+<body>
+<div id="master">
+
+
+
+
+<div class="topnav">
+    <a href="#dropdown">Test</a>
+    <a href="#dropdown">Test</a>
+    <a href="#dropdown">Test</a>
+    <a href="#dropdown">Test</a>
+    <a href="#dropdown">Test</a>
+    <a href="#dropdown">Test</a>
+    <a class="right" href="#login">Log in</a>
+
+</div>
+
+<div class="b">
+    <h1>Airline Booking</h1>
+</div>
+
+<div class="a">
+    <div>
+        <div class="box">
+            <div class="middle">
+            <a href="#" data-trigger="focus" class="dropdown" id="departures" data-toggle="popover">Departure</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="middle">
+            <a href="#" data-trigger="focus" class="dropdown" id="destinations" data-toggle="popover">Destination</a>
+            </div>
+        </div>
+        <div id="dep_popover" class="popover fade bottom in" data-trigger="focus">
+            <div class="arrow" style="left: 9.375%;"></div>
+            <div class="popover-content" id="dep_content">
+            </div>
+        </div>
+        <div id="des_popover" class="popover fade bottom in" data-trigger="focus">
+            <div class="arrow" style="left: 9.375%;"></div>
+            <div class="popover-content" id="des_content">
+            </div>
+        </div>
+
+        <!-- CLOSE POPOVER WHEN CLICKING SOMEWHERE ELSE!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+        <div id="departureloc">
+        </div>
+<!--        <select id="departure" onchange="drop_change_dep()"></select>-->
+
+
+<!--        <select id="destination" name="destination" onchange="drop_change()">-->
+<!--            <option value="Select" selected="selected" hidden="true">Select</option>-->
+<!--        </select>-->
+    </div>
+
+    <br><label>Return:</label>
+    <input id="return" name="return" type="checkbox" onclick="datedisabled()">
+
+    <input id="departdate" name="departdate" type="date" onchange="valid_dates()">
+
+    <input id="returndate" name="arrivedate" type="date" disabled="true">
+
+
+    <br><div style="overflow: hidden;">
+            <p>Passengers: <a>1 Passenger</a></p>
+
+    </div>
+
+    <button onclick="search_button()">Search</button>
+
+    </div>
+
+<br>
+<div class="a">
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+    <p>Test</p>
+</div>
+</div>
+</body>
+
+<script src="client.js"></script>
+</html>
